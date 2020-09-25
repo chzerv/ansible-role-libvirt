@@ -1,2 +1,15 @@
 ---
-# defaults file for libvirt
+libvirt_selinux_booleans: []
+# selinux_booleans:
+#   - name: staff_use_svirt
+#     state: yes
+#     persistent: yes
+
+libvirt_install_virt_manager: true
+libvirt_uefi_vm_support: true
+
+libvirt_access_vms_using_hostnames: true
+libvirt_users_in_libvirt_group: []
+# libvirt_users_in_libvirt_group:
+#   - bar
+#   - foo
