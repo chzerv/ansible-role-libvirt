@@ -1,0 +1,8 @@
+---
+# Packages for CentOS 8
+packages:
+  - '@virt'
+  - virt-install
+  - virt-viewer
+  - virt-top
+  - libguestfs-tools

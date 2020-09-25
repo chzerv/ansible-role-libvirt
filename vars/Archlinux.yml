@@ -1,0 +1,7 @@
+---
+# Packages for Archlinux
+packages:
+  - libvirt
+  - dnsmasq
+  - ebtables
+  - virt-install

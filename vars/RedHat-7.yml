@@ -1,0 +1,11 @@
+---
+# Packages for CentOS 7
+packages:
+  - kvm
+  - libvirt
+  - virt-manager
+  - virt-top
+  - qemu-kvm
+  - qemu-img
+  - virt-install
+  - libguestfs-tools

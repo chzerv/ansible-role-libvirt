@@ -1,0 +1,7 @@
+---
+# Packages for Fedora
+packages:
+  - '@virtualization'
+  - virt-top
+  - libguestfs-tools
+  - python-libguestfs

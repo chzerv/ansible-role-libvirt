@@ -1,0 +1,10 @@
+---
+# Packages for Debian
+packages:
+  - libvirt-daemon-system
+  - virt-viewer
+  - virtinst
+  - libvirt-clients
+  - virt-top
+  - qemu-img
+  - qemu-utils
