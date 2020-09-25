@@ -4,4 +4,4 @@
   tasks:
     - name: "Include libvirt"
       include_role:
-        name: "libvirt"
+        name: "ansible-role-libvirt"
