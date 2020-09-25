@@ -1,38 +1,52 @@
-Role Name
+# Ansible Role: Libvirt
 =========
 
-A brief description of the role goes here.
+This role installs and configures `libvirt` on Debian-based, RedHat-based and Archlinux systems.
 
-Requirements
+## Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None.
 
-Role Variables
+## Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+`libvirt_selinux_booleans`
 
-Dependencies
+> SELinux booleans to be applied. Make sure to read [RedHat's documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/configuring_and_managing_virtualization/index#virtualization-booleans-in-rhel-8_securing-virtual-machines-in-rhel-8) on securing VMs. 
+
+` libvirt_install_virt_manager: true`
+
+> Whether to install virt-manager or not. Virt-manager is a GUI front-end for libvirt, so it is most likely
+> useless in headless systems.
+
+`libvirt_uefi_vm_support: true`
+
+> Install OVMF packages which provide the ability to create VMs using UEFI boot mode.
+
+`libvirt_access_vms_using_hostnames: true`
+
+> Enable the `libvirt` NSS module which allows host access to guests on non-isolated networks.
+
+`libvirt_users_in_libvirt_group: []`
+
+> A list of users that will be added in the `libvirt` group. Users in this group can have password-less access
+> to the libvirt daemon.
+
+## Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
 
-Example Playbook
+## Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+WIP.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## License
 
-License
--------
+MIT / BSD
 
-BSD
+## Author Information
 
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Xristos Zervakis
