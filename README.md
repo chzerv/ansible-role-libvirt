@@ -1,15 +1,12 @@
 # Ansible Role: Libvirt
-=========
 
 This role installs and configures `libvirt` on Debian-based, RedHat-based and Archlinux systems.
 
 ## Requirements
-------------
 
 None.
 
 ## Role Variables
---------------
 
 `libvirt_selinux_booleans`
 
@@ -34,12 +31,10 @@ None.
 > to the libvirt daemon.
 
 ## Dependencies
-------------
 
 None.
 
 ## Example Playbook
-----------------
 
 WIP.
 
