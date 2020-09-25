@@ -6,5 +6,4 @@ packages:
   - virtinst
   - libvirt-clients
   - virt-top
-  - qemu-img
   - qemu-utils
