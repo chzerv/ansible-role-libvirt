@@ -27,7 +27,7 @@ None.
 
 `libvirt_users_in_libvirt_group: []`
 
-> A list of users that will be added in the `libvirt` group. Users in this group can have password-less access
+> A list of users that will be added to the `libvirt` group. Users of this group are allowed password-less access
 > to the libvirt daemon.
 
 ## Dependencies
