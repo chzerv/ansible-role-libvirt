@@ -6,3 +6,5 @@ packages:
   - virt-viewer
   - virt-top
   - libguestfs-tools
+
+ovmf_package: edk2-ovmf

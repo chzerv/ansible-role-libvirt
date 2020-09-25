@@ -1,18 +1,22 @@
 ---
+- name: Ensure system is up-to-date.
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+    
 - name: Install required packages.
-  yum:
+  community.general.pacman:
     name: "{{ packages }}"
     state: present
 
 - name: Install virt-manager.
-  yum:
+  community.general.pacman:
     name: virt-manager
     state: present
   when: libvirt_install_virt_manager | bool
 
-- name: Install edk2-ovmf for UEFI VMs.
-  yum:
-    name: "{{ ovmf_package }}"
+- name: Install virt-manager.
+  community.general.pacman:
+    name: edk2-ovmf
     state: present
   when: libvirt_uefi_vm_support | bool
-    

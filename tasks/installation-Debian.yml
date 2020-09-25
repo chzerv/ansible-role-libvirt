@@ -1,18 +1,22 @@
 ---
+- name: Update apt-cache on Debian systems.
+  apt:
+    update_cache: true
+    cache_valid_time: 1800
+
 - name: Install required packages.
-  yum:
+  apt:
     name: "{{ packages }}"
     state: present
 
 - name: Install virt-manager.
-  yum:
+  apt:
     name: virt-manager
     state: present
   when: libvirt_install_virt_manager | bool
 
 - name: Install edk2-ovmf for UEFI VMs.
-  yum:
-    name: "{{ ovmf_package }}"
+  apt:
+    name: ovmf
     state: present
   when: libvirt_uefi_vm_support | bool
-    

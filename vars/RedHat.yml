@@ -5,3 +5,5 @@ packages:
   - virt-top
   - libguestfs-tools
   - python-libguestfs
+
+ovmf_package: edk2-ovmf

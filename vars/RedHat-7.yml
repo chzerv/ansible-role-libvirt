@@ -9,3 +9,5 @@ packages:
   - qemu-img
   - virt-install
   - libguestfs-tools
+
+ovmf_package: OVMF
