@@ -36,7 +36,24 @@ None.
 
 ## Example Playbook
 
-WIP.
+```yaml
+- hosts: server
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - { role: chzerv.libvirt }
+```
+
+The `vars/main.yml` file:
+
+```yaml
+libvirt_install_virt_manager: true
+libvirt_uefi_vm_support: true
+libvirt_access_vms_using_hostnames: true
+libvirt_users_in_libvirt_group:
+  - bob
+```
 
 ## License
 
