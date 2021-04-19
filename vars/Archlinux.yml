@@ -3,5 +3,5 @@
 packages:
   - libvirt
   - dnsmasq
-  - ebtables
+  - iptables-nft
   - virt-install
