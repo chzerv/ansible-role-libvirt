@@ -3,11 +3,11 @@
   community.general.pacman:
     update_cache: true
     upgrade: true
-    
+
 - name: Install required packages.
-  community.general.pacman:
-    name: "{{ packages }}"
-    state: present
+  ansible.builtin.shell: "yes | pacman -S {{ item }}"
+  with_items:
+    - "{{ packages }}"
 
 - name: Install virt-manager.
   community.general.pacman:
