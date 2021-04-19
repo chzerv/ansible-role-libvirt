@@ -6,6 +6,7 @@
 
 - name: Install required packages.
   ansible.builtin.shell: "yes | pacman -S {{ item }}"
+  changed_when: false
   with_items:
     - "{{ packages }}"
 
