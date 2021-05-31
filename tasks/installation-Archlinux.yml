@@ -16,7 +16,7 @@
     state: present
   when: libvirt_install_virt_manager | bool
 
-- name: Install virt-manager.
+- name: Install edk2-ovmf for UEFI VMs.
   community.general.pacman:
     name: edk2-ovmf
     state: present
