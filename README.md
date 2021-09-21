@@ -2,7 +2,7 @@
 
 ![Test and release.](https://github.com/chzerv/ansible-role-libvirt/workflows/Test%20and%20release./badge.svg?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Ansible Role](https://img.shields.io/ansible/role/50034?color=dodgerblue)](https://galaxy.ansible.com/chzerv/libvirt)
+[![Ansible Role](https://img.shields.io/ansible/role/50932?color=dodgerblue)](https://galaxy.ansible.com/chzerv/libvirt)
 
 This role installs and configures `libvirt` on Debian-based, RedHat-based and Archlinux systems.
 
