@@ -5,3 +5,5 @@ packages:
   - dnsmasq
   - iptables-nft
   - virt-install
+  - bridge-utils
+  - qemu

@@ -2,8 +2,10 @@
 # Packages for Debian
 packages:
   - libvirt-daemon-system
+  - libvirt-clients
+  - qemu-system
+  - qemu-utils
+  - bridge-utils
   - virt-viewer
   - virtinst
-  - libvirt-clients
   - virt-top
-  - qemu-utils
