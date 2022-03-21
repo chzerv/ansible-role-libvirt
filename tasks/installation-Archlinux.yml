@@ -5,7 +5,11 @@
     upgrade: true
 
 - name: Install required packages.
-  ansible.builtin.shell: "yes | pacman -S {{ item }}"
+  ansible.builtin.shell: " |
+    set -o pipefail
+    yes | pacman -S {{ item }}"
+  args:
+    executable: /bin/bash
   changed_when: false
   with_items:
     - "{{ packages }}"
