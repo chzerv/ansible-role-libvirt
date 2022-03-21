@@ -1,6 +1,6 @@
 ---
 - name: Set distribution family specific variables.
-  include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - "vars/{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
     - "vars/{{ ansible_os_family }}.yml"
@@ -12,7 +12,7 @@
   include_tasks: configuration.yml
 
 - name: Ensure the libvirt service is started and enabled on boot.
-  service:
+  ansible.builtin.service:
     name: libvirtd
     state: started
     enabled: true

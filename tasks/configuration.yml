@@ -8,7 +8,7 @@
   when: ansible_selinux.status == "enabled"
 
 - name: Enable the libvirt NSS module.
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/nsswitch.conf
     backrefs: true
     regexp: '^(hosts:\s*.*)(?<!libvirt)$'
@@ -18,12 +18,12 @@
 - name: Allow members of the libvirt group to have password-less access to the RW daemon.
   block:
     - name: Ensure the libvirt group exists.
-      group:
+      ansible.builtin.group:
         name: libvirt
         state: present
 
     - name: Add user(s) to the libvirt group.
-      user:
+      ansible.builtin.user:
         name: "{{ item }}"
         groups: libvirt
         append: true
