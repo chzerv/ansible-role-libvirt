@@ -4,6 +4,6 @@ packages:
   - libvirt
   - dnsmasq
   - iptables-nft
-  - virt-install
+  - dmidecode
   - bridge-utils
-  - qemu
+  - openbsd-netcat

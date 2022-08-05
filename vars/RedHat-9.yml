@@ -1,0 +1,11 @@
+---
+# Packages for RHEL (and family) 9
+packages:
+  - qemu-kvm
+  - libvirt
+  - virt-install
+  - virt-viewer
+  - virt-top
+  - libguestfs-tools
+
+ovmf_package: edk2-ovmf

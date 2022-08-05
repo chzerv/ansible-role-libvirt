@@ -1,21 +1,21 @@
 ---
-- name: Update ansible.builtin.apt-cache on Debian systems.
+- name: Debian | Update apt-cache
   ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 1800
 
-- name: Install required packages.
+- name: Debian | Install required packages
   ansible.builtin.apt:
     name: "{{ packages }}"
     state: present
 
-- name: Install virt-manager.
+- name: Debian | Install virt-manager
   ansible.builtin.apt:
     name: virt-manager
     state: present
   when: libvirt_install_virt_manager | bool
 
-- name: Install edk2-ovmf for UEFI VMs.
+- name: Debian | Install edk2-ovmf for UEFI VMs
   ansible.builtin.apt:
     name: ovmf
     state: present

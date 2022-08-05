@@ -1,26 +1,24 @@
 ---
-- name: Ensure system is up-to-date.
+- name: Archlinux | Ensure system is up-to-date
   community.general.pacman:
     update_cache: true
     upgrade: true
 
-- name: Install required packages.
-  ansible.builtin.shell: |
-    set -o pipefail &&
-    yes | pacman -S "{{ item }}"
+- name: Archlinux | Install required packages.
+  ansible.builtin.shell: "yes | pacman -S {{ item }}"
   args:
     executable: /bin/bash
   changed_when: false
   with_items:
     - "{{ packages }}"
 
-- name: Install virt-manager.
+- name: Archlinux | Install virt-manager
   community.general.pacman:
     name: virt-manager
     state: present
   when: libvirt_install_virt_manager | bool
 
-- name: Install edk2-ovmf for UEFI VMs.
+- name: Archlinux | Install edk2-ovmf for UEFI VMs
   community.general.pacman:
     name: edk2-ovmf
     state: present
